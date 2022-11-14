@@ -3,18 +3,20 @@ import {
   MagnifyingGlassIcon,
   PlusCircleIcon,
   HeartIcon,
+  UserGroupIcon,
   PaperAirplaneIcon,
-  MenuIcon,
-} from '@heroicons/react/24/solid';
+  Bars3Icon,
+} from '@heroicons/react/24/outline';
+import { HomeIcon } from '@heroicons/react/24/solid';
 
 function Header() {
   return (
     <div>
-      <div className="flex justify-between bg-white max-w-6xl">
+      <div className="flex justify-between bg-white max-w-6xl mx-5 lg:mx-auto">
         {/* Left - Logo */}
         <div className="relative hidden lg:inline-grid w-24 cursor-pointer">
           <Image
-            src="https://links.papareact.com/ocw"
+            src="https://i.imgur.com/7NZo3rC.png"
             fill
             style={{ objectFit: 'contain' }}
             alt="Instagram Logo"
@@ -22,7 +24,7 @@ function Header() {
         </div>
         <div className="relative w-10 lg:hidden flex-shrink-0 cursor-pointer">
           <Image
-            src="https://links.papareact.com/jjm"
+            src="https://i.imgur.com/KEnzPwS.png"
             fill
             style={{ objectFit: 'contain' }}
             alt="Instagram Logo"
@@ -43,7 +45,29 @@ function Header() {
           </div>
         </div>
 
-        {/* Right */}
+        {/* Right - Icons */}
+        <div className="flex items-center justify-end space-x-4">
+          <HomeIcon className="navBtn" />
+          <Bars3Icon className="h-6 shrink-0 md:hidden cursor-pointer" />
+
+          <div className="relative navBtn">
+            <PaperAirplaneIcon className="navBtn -rotate-45" />
+            <div className="absolute -top-1 -right-2 text-xs w-5 h-5 bg-red-600 text-white rounded-full flex items-center justify-center animate-pulse">
+              3
+            </div>
+          </div>
+          <PlusCircleIcon className="navBtn" />
+          <UserGroupIcon className="navBtn" />
+          <HeartIcon className="navBtn" />
+
+          <Image
+            src="https://i.imgur.com/tQ7EcAl.jpg"
+            width={40}
+            height={40}
+            alt="Profile picture"
+            className="h-10 w-10 object-cover rounded-full cursor-pointer shrink-0"
+          />
+        </div>
       </div>
     </div>
   );
