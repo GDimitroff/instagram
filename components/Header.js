@@ -14,7 +14,7 @@ const Header = () => {
     <div className="shadow-sm border-b bg-white sticky top-0 z-50">
       <div className="flex justify-between bg-white max-w-6xl mx-5 lg:mx-auto">
         {/* Left - Logo */}
-        <div className="relative hidden lg:inline-grid w-24 cursor-pointer lg:ml-5">
+        <div className="relative hidden lg:inline-grid w-24 cursor-pointer">
           <Image
             src="https://i.imgur.com/7NZo3rC.png"
             fill
@@ -46,7 +46,7 @@ const Header = () => {
         </div>
 
         {/* Right - Icons */}
-        <div className="flex items-center justify-end space-x-2 sm:space-x-4 lg:mr-5">
+        <div className="flex items-center justify-end space-x-2 sm:space-x-4">
           <HomeIcon className="navBtn" />
           <Bars3Icon className="h-6 shrink-0 md:hidden cursor-pointer" />
 
